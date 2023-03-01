@@ -1,57 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Unlock Videos</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Airbnb Video Bounty</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<header>
-		<h1>Unlock Videos</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Search</a></li>
+				<li><a href="#">Submit a Bounty</a></li>
+				<li><a href="#">My Bounties</a></li>
+			</ul>
+		</nav>
 	</header>
 
-	<main>
-		<section id="pricing">
-			<h2>Pricing</h2>
-			<ul>
-				<li>Single Video: $5</li>
-				<li>Three Videos: $10</li>
-				<li>All Videos: $20</li>
-			</ul>
-		</section>
+	<section class="landing-page">
+		<h1>Find Your Dream Airbnb</h1>
+		<p>Looking for the perfect Airbnb but can't find the right video? Post a bounty and let our videographers do the work for you.</p>
+		<a href="#" class="btn-primary">Submit a Bounty</a>
+	</section>
 
-		<section id="payment">
-			<h2>Payment</h2>
-			<form action="payment-processing.php" method="post">
-				<label for="name">Name:</label>
-				<input type="text" id="name" name="name" required>
+	<section class="bounty-search">
+		<h2>Search Bounties</h2>
+		<form>
+			<label for="location">Location:</label>
+			<input type="text" id="location" name="location">
 
-				<label for="email">Email:</label>
-				<input type="email" id="email" name="email" required>
+			<label for="budget">Budget:</label>
+			<select id="budget" name="budget">
+				<option value="$50">$50</option>
+				<option value="$100">$100</option>
+				<option value="$200">$200</option>
+				<option value="$500">$500</option>
+			</select>
 
-				<label for="videos">Select Videos:</label>
-				<select id="videos" name="videos[]" multiple required>
-					<option value="video1">Video 1</option>
-					<option value="video2">Video 2</option>
-					<option value="video3">Video 3</option>
-					<option value="video4">Video 4</option>
-				</select>
+			<button type="submit">Search</button>
+		</form>
+	</section>
 
-				<label for="amount">Amount:</label>
-				<input type="number" id="amount" name="amount" min="5" max="20" required>
+	<section class="video-gallery">
+		<h2>Recent Bounties</h2>
+		<div class="video-card">
+			<h3>Airbnb in Paris</h3>
+			<video controls>
+				<source src="video.mp4" type="video/mp4">
+			</video>
+			<p><span>Location:</span> Paris, France</p>
+			<p><span>Bounty:</span> $100</p>
+			<p><span>Submitted By:</span> John Smith</p>
+		</div>
 
-				<label for="card">Credit Card Number:</label>
-				<input type="text" id="card" name="card" required>
+		<div class="video-card">
+			<h3>Airbnb in Tokyo</h3>
+			<video controls>
+				<source src="video.mp4" type="video/mp4">
+			</video>
+			<p><span>Location:</span> Tokyo, Japan</p>
+			<p><span>Bounty:</span> $200</p>
+			<p><span>Submitted By:</span> Jane Doe</p>
+		</div>
+	</section>
 
-				<label for="cvv">CVV:</label>
-				<input type="number" id="cvv" name="cvv" required>
-
-				<input type="submit" value="Submit Payment">
-			</form>
-		</section>
-	</main>
-	
 	<footer>
-		<p>&copy; 2023 Unlock Videos</p>
+		<p>&copy; 2023 Airbnb Video Bounty</p>
 	</footer>
 </body>
 </html>
+
+				
